@@ -18,6 +18,7 @@ driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 driver.manage().window().maximize();
 driver.findElement(By.xpath("//input[@id='lst-ib']")).sendKeys("abc");
 List<WebElement> ls=driver.findElements(By.xpath("//div[contains(text(),'abc')]"));
+System.out.println();
 System.out.println(ls.size());
 for(int i=0;i<ls.size();i++){
 	System.out.println(ls.get(i).getText());
